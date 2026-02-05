@@ -21,6 +21,7 @@ src/main/java/com/squirreldetector/
 └── DjlConfiguration.java             # Spring config for model loading
 
 model/best.torchscript                # Pre-trained YOLOv8 model
+sourceimages/                         # Example trail camera images for testing
 ```
 
 ## How It Works
@@ -51,6 +52,9 @@ mvn package -DskipTests
 
 # Run
 java -jar target/squirrel-detector-camel-1.0-SNAPSHOT.jar
+
+# Copy example images into input folder for testing
+mvn exec:exec@copy-test-images
 ```
 
 ## Output Folders

@@ -1,10 +1,12 @@
 # 🐿️ Squirrel Detector
 
-> An Apache Camel + Spring Boot application that uses YOLOv8 and DJL to automatically detect squirrels in trail camera images.
+An Apache Camel Spring Boot application that uses YOLOv8 and DJL to automatically detect squirrels in trail camera images.
 
 ---
 
 ## The Problem
+
+![Output: One of my trail cameras](./trailcam.JPG)
 
 I have a number of trail cameras set up in the woods behind my house to capture pictures of whatever animals come to the bordering wetlands. I've been checking them for the last six months and I've seen deer, opossum, raccoons, fisher cats, mice, chipmunks, bunnies, coyotes, quite a few bird species, and squirrels. Lots and lots of squirrels.
 
@@ -16,7 +18,7 @@ I see so many squirrels that the large majority of the pictures and videos I've 
 
 I took my photos and started annotating them with bounding boxes to identify squirrels using [Label Studio](https://labelstud.io/). Once I had enough annotated images, I exported them to YOLOv8, trained a model using Ultralytics, and exported it to TorchScript. The current version of my TorchScript model is included in the `model/` directory.
 
-The model is built with 245 images, and I'm gradually improving it - I'm getting some false positives and quite a few cases where the model fails to find some squirrels.    I'm hoping with a larger dataset that I'll see more accurate results.
+The model is currently built with 245 images, and I'm gradually improving it by labelling additional images and regenerating the model - I'm getting some false positives and quite a few cases where the model fails to find some squirrels.    I'm hoping with a larger dataset that I'll see more accurate results and eventually when I have enough content, I plan on improving it with identification for other animals.
 
 ---
 
